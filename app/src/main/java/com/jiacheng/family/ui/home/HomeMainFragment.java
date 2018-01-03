@@ -40,7 +40,7 @@ public class HomeMainFragment extends BaseFragment {
         float selectSize = unSelectSize * 1.2f;
         int selectColor = res.getColor(R.color.white);
         int unSelectColor = res.getColor(R.color.jc_666666);
-        indicator.setOnTransitionListener(new OnTransitionTextListener().setColor(selectColor, unSelectColor));
+//        indicator.setOnTransitionListener(new OnTransitionTextListener().setColor(selectColor, unSelectColor));
         viewPager.setCanScroll(true);// 可以禁止viewpager的滑动事件
         viewPager.clearAnimation();//注意：清除fragment之间切换动画。
         viewPager.setOffscreenPageLimit(2);
