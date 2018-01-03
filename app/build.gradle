@@ -21,7 +21,7 @@ android {
         }
         ndk {
             //选择要添加的对应cpu类型的.so库。可以根据需求删除
-            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a','x86'
         }
     }
     buildTypes {
