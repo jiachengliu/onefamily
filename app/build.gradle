@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.jiacheng.family"
+        minSdkVersion 15
+        targetSdkVersion 26
+        flavorDimensions "versionCode"
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+        ndk {
+            //选择要添加的对应cpu类型的.so库。可以根据需求删除
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false;
+    }
+
+    dexOptions {
+        jumboMode = true
+        incremental true
+        javaMaxHeapSize "4g"
+
+    }
+    productFlavors {
+
+        dmr_test {
+            manifestPlaceholders = [CHANNEL_NAME: "dmr_test"]
+        }
+
+    }
+applicationVariants.all { variant ->
+    variant.outputs.all { output ->
+        def outputFile = output.outputFile
+
+        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+            // 输出apk名称为：我是大美人_v[版本号]_[时间]_[渠道].apk
+            def fileName = "我是项目_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+
+            //output.outputFile = new File(outputFile.parent, fileName)
+            outputFileName = fileName
+        }
+    }
+}
+}
+def releaseTime() {
+
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+}
