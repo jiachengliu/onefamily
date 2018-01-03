@@ -33,7 +33,7 @@ public class MainActivity extends BaseActivity {
     private void initPage(){
         SViewPager viewPager = (SViewPager) findViewById(R.id.tabmain_viewPager);
         indicator = (FixedIndicatorView) findViewById(R.id.tabmain_indicator);
-        indicator.setOnTransitionListener(new OnTransitionTextListener().setColor(Color.RED, Color.GRAY));
+//        indicator.setOnTransitionListener(new OnTransitionTextListener().setColor(R.color.jc_2c2c2c, R.color.jc_666666));
 
         //这里可以添加一个view，作为centerView，会位于Indicator的tab的中间
         centerView = getLayoutInflater().inflate(R.layout.tab_main_center, indicator, false);

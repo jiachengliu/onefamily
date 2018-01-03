@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@mipmap/icon_bottom_menu_video_pre" android:state_selected="true"></item>
-    <item android:drawable="@mipmap/icon_bottom_menu_video_nor"></item>
+    <item android:drawable="@mipmap/icon_bottom_menu_home_pre" android:state_selected="true"></item>
+    <item android:drawable="@mipmap/icon_bottom_menu_home_nor"></item>
+    <!--pre  #2c2c2c-->
+    <!--nor  #666666-->
 
+    <!--http://iconfont.cn/collections/detail?cid=6882  人人直播官方图标库单色-->
 </selector>
