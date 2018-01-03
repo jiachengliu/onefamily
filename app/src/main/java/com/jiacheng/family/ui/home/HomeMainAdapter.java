@@ -56,10 +56,10 @@ public class HomeMainAdapter extends IndicatorViewPager.IndicatorFragmentPagerAd
             bundle.putInt(HomeLeftFragment.INTENT_INT_POSITION, position);
             fragment.setArguments(bundle);
         }else if (position==1){
-            fragment = new HomeLeftFragment();
+            fragment = new HomeRightFragment();
             Bundle bundle = new Bundle();
-            bundle.putString(HomeLeftFragment.INTENT_STRING_TABNAME, tabNames[position]);
-            bundle.putInt(HomeLeftFragment.INTENT_INT_POSITION, position);
+            bundle.putString(HomeRightFragment.INTENT_STRING_TABNAME, tabNames[position]);
+            bundle.putInt(HomeRightFragment.INTENT_INT_POSITION, position);
             fragment.setArguments(bundle);
         }
         return fragment;

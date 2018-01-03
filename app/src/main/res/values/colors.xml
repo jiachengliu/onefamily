@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#36ab60</color><!--状态栏底色-->
-    <color name="colorAccent">#36ab60</color>
+    <color name="colorPrimaryDark">#3399cc</color><!--状态栏底色-->
+    <color name="colorAccent">#3399cc</color>
 
     <color name="jc_e9e9e9">#e9e9e9</color>
     <color name="jc_line">#e1e1e1</color>
@@ -11,5 +11,6 @@
     <color name="jc_666666">#666666</color>
     <color name="jc_2c2c2c">#2c2c2c</color>
     <color name="jc_36ab60">#36ab60</color>
+    <color name="jc_3399cc">#3399cc</color>
     <color name="transparent">#00000000</color>
 </resources>
