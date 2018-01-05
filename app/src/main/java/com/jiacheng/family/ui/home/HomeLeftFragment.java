@@ -102,7 +102,15 @@ public class HomeLeftFragment extends BaseFragment {
         HomeLeftBean homeLeftBean;
         for (int i=0;i<20;i++){
             homeLeftBean = new HomeLeftBean();
-//            homeLeftBean.set
+            List<String> temp = new ArrayList<>();
+            if (i%2==0){
+                for (int j=0;j<i&&j<10;j++){
+                    temp.add("");
+                }
+                homeLeftBean.setPicList(temp);
+            }else {
+                homeLeftBean.setPicList(temp);
+            }
             homeLeftBeanList.add(homeLeftBean);
         }
         if (isRefresh){
