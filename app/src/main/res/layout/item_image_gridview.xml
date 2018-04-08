@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.jiacheng.family.ui.widget.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.android.datamip.ui.widget.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
@@ -13,4 +13,4 @@
         android:scaleType="centerCrop"
         android:src="@color/jc_e1e1e1" />
 
-</com.jiacheng.family.ui.widget.SquareLayout>
+</com.android.datamip.ui.widget.SquareLayout>

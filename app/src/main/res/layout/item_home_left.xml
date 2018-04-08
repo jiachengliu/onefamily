@@ -66,7 +66,7 @@
                     android:layout_marginTop="5dp"
                     android:text="今天,在大家沉醉于李小璐的“兄嫂门”和陈学冬与神秘女子恋情曝光中小仙女看到了一另一条爆掉的信息陈乔恩酒驾被警方带走今天凌晨陈乔恩喝酒后外出。"
                     />
-                <com.jiacheng.family.ui.widget.ImageGridView
+                <com.android.datamip.ui.widget.ImageGridView
                     android:id="@+id/gridview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
